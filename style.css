@@ -64,10 +64,12 @@ main{
     width: 18px;
     height: 10px;
     background-image: url(img/burger_menu.svg);
-    display: none;
+    background-repeat: no-repeat;
     position: absolute;
     right: 18px;
+    top: 12px;
     cursor: pointer;
+    z-index: 5;
 }
 .burger:before{
     content: "";
@@ -253,6 +255,7 @@ p{
     width: 100%;
     align-items: center;
     justify-items: center;
+    margin: auto;
 }
 .pats_buttons{
     position: relative;
@@ -296,11 +299,13 @@ p{
     background-color:#E47209;
 }
 .pets{
+    position: relative;
     display: grid;
     margin: auto;
     grid-template: 428px 426px / 368px 368px 368px ;
     grid-gap: 20px 28px;
-    overflow: hidden;
+    left: 0px;
+
 }
 
 .animals_block{
@@ -1181,10 +1186,6 @@ footer{
             left: 10px;
             bottom: 11px;
         }
-        .burger{
-        display: block;
-        top: 12px;
-        }
         .section_1{
         height: 373px;
     }
@@ -1245,17 +1246,16 @@ footer{
         margin-top: 0px;
         display: block;
     }
+
     .pets_container{
         max-width: 640px;
         margin: auto;
-        padding: 0px 20px 43px 20px;
+        padding: 0px 20px 43px 0px;
     }
     .pets{
         grid-template: repeat(2,332px) / repeat(3,285px);
         grid-gap: 90px 28px;
-    }
-    .button_right{
-        margin-right: 40px;
+        width: 598px;
     }
     .animals_block_content{
         padding-left: 11px;
@@ -1284,6 +1284,7 @@ footer{
         bottom: 387px;
         max-width: 193px;
         padding-right: 2px;
+        width: 153px;
     }
     .choose_your_favorite{
         margin: auto;
@@ -1547,7 +1548,7 @@ footer{
             grid-template-rows: repeat(4, 332px);
             grid-template-columns: 285px;
             grid-gap: 21px 0px;
-            height: 1392px;
+            height: 1390px;
             width: 285px;
             margin: auto;
         }
@@ -1799,4 +1800,40 @@ footer{
             margin-bottom: 25px;
     }
 }
+}
+.logo_burger{
+    transform: scale(0.8);
+    left: -8px;
+    top: -10px;
+    border-color: #FE9013;
+}
+.logo_burger h1{
+    color: #FE9013;
+}
+.logo_burger img{
+    left: 12px;
+    bottom: 7px
+}
+.burger_nav{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    top: -1500px;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.burger_nav:after{
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 100%;
+    background-color: rgba(232, 232, 232, 0.957);
+    z-index: -1;
+}
+.burger_nav a{
+    margin: 15px 0px 0px 10px;
+    font-weight: 400;
+    color: #333B41;
+    width: 110px;
 }
