@@ -29,7 +29,7 @@ let clickOpenBurger = ()=>{
     background-image: url(img/x_icon.svg);
     height: 18px;
     `
-    setTimeout(()=>{burger_nav.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'}, 500)
+    setTimeout(()=>{burger_nav.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'}, 200)
 }
 let clickCloseBurger = ()=>{
     burger_open = false;
